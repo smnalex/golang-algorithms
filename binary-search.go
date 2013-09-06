@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func binarySearch(sortedArray []int, toFind int) int {
+func sortedBinarySearch(sortedArray []int, toFind int) int {
 
   var low, high int
   low = sortedArray[0]
@@ -26,6 +26,15 @@ func binarySearch(sortedArray []int, toFind int) int {
     }
   }
   return -1
+}
+
+func unsortedBinarySearch(unsortedArray []int, toFind int) int {
+  for int i = 0; i < len(unsortedArray); i++ {
+    if unsortedArray[i] == toFind {
+      return i;
+    }
+  }
+  return -1;
 }
 
 func main() {
