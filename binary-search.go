@@ -29,7 +29,7 @@ func sortedBinarySearch(sortedArray []int, toFind int) int {
 }
 
 func unsortedBinarySearch(unsortedArray []int, toFind int) int {
-  for int i = 0; i < len(unsortedArray); i++ {
+  for i := 0; i < len(unsortedArray); i++ {
     if unsortedArray[i] == toFind {
       return i;
     }
@@ -38,12 +38,26 @@ func unsortedBinarySearch(unsortedArray []int, toFind int) int {
 }
 
 func main() {
+  
+  // Sorted binary search test
+  fmt.Println("Sorted binary search:")
   sortedArray := []int{0, 2, 4, 6, 8, 10, 12, 14, 16, 18}
-  index := binarySearch(sortedArray, 10)
+  index := sortedBinarySearch(sortedArray, 10)
   if index == -1 {
     fmt.Println("Number not found")
   } else {
     fmt.Println("Index: ", index)
     fmt.Println("sortedArray[", index, "] = ", sortedArray[index])
+  }
+
+  // Unsorted binary search test
+  fmt.Println("Unsorted binary search:")
+  unsortedArray := []int{0, 4, 2, 8, 6, 12, 10, 16, 14, 18}
+  index = unsortedBinarySearch(unsortedArray, 10)
+  if index == -1 {
+    fmt.Println("Number not found")
+  } else {
+    fmt.Println("Index: ", index)
+    fmt.Println("unsortedArray[", index, "] = ", unsortedArray[index])
   }
 }
