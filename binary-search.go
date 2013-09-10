@@ -28,15 +28,6 @@ func sortedBinarySearch(sortedArray []int, toFind int) int {
   return -1
 }
 
-func unsortedBinarySearch(unsortedArray []int, toFind int) int {
-  for i := 0; i < len(unsortedArray); i++ {
-    if unsortedArray[i] == toFind {
-      return i;
-    }
-  }
-  return -1;
-}
-
 func main() {
   
   // Sorted binary search test
