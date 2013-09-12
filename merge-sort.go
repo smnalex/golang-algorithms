@@ -44,7 +44,6 @@ func merge(left, right []int) []int {
       results = append(results, left[0])
       left = left[1:len(left)]
     } else if len(right) > 0 {
-      // same operation as the above(in the right sublist).
       results = append(results, right[0])
       right = right[1:len(right)]
     }
