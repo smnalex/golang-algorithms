@@ -56,6 +56,6 @@ func main() {
   
   arrayzor := []int{1, 6, 2, 4, 9, 0, 5, 3, 7, 8}
   fmt.Println("Unsorted array: ", arrayzor)
-  mergeSort(arrayzor)
+  arrayzor = mergeSort(arrayzor)
   fmt.Println("Sorted array: ", arrayzor)
 }
