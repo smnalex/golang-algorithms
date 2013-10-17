@@ -30,7 +30,6 @@ func binarySearch(arrayzor []int, toFind int) int {
 
 func main() {
 
-	// Binary search test
 	fmt.Println("Binary search:")
 	arrayzor := []int{0, 2, 4, 6, 8, 10, 12, 14, 16, 18}
 	index := binarySearch(arrayzor, 10)

@@ -54,8 +54,8 @@ func merge(left, right []int) []int {
 
 func main() {
   
-  arrayzor := []int{9, 7, 8, 6, 5, 4, 3, 1, 2, 0}
+  arrayzor := []int{1, 6, 2, 4, 9, 0, 5, 3, 7, 8}
   fmt.Println("Unsorted array: ", arrayzor)
-  fmt.Println("Sorted array: ", mergeSort(arrayzor))
-
+  mergeSort(arrayzor)
+  fmt.Println("Sorted array: ", arrayzor)
 }
