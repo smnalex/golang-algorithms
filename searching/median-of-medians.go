@@ -12,14 +12,17 @@ import (
 //
 func medianOfMedians(elementList []int, k, r int) int {
 
+	// we'll use n as our length for convience
+	n := len(elementList)
+
 	// our base case, len < 10
-	if len(elementList) < 10 {
+	if n < 10 {
 		sort.Ints(elementList)
 		return elementList[k - 1]
 	}
 
 	// m is the number of subarrays we need
-	m := (len(elementList) + r - 1)/r
+	m := (n + r - 1)/r
 
 	medians := make([]int, m)
 
@@ -30,7 +33,7 @@ func medianOfMedians(elementList []int, k, r int) int {
 		var arr []int
 
 		// sort our big arrays into sub arrays
-		if v >= len(elementList) {
+		if v >= n {
 			arr = make([]int, len(elementList[(i * r):]))
 			copy(arr, elementList[(i * r):])
 		} else {
