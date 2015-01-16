@@ -6,7 +6,7 @@ import (
 )
 
 func insertionSort(array []int) {
-	for i := 1; i < len(array) - 1; i++ {
+	for i := 1; i < len(array); i++ {
 		for j := i; j > 0 && array[j] < array[j - 1]; j-- {
 			algoutils.Swap(array, j, j - 1)
 		}
